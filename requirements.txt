@@ -2,3 +2,4 @@
 # Student: Aditya Ranjan Kumar (CS-2341901)
 Flask>=2.2.0
 requests>=2.28.0
+python-docx>=1.1.0

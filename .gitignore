@@ -23,5 +23,13 @@ env/
 *.swp
 *.swo
 
+# Runtime logs
+*.log
+
+# Submission packages
+*.zip
+*.docx
+
 # Note: Keeping dummy .env files in vulnerable_app/ and secure_app/
 # because they are required simulated test files for the assignment.
+

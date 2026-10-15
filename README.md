@@ -25,11 +25,13 @@ I created a dummy Flask web app to show how an attacker can use `../` directory 
 
 - `vulnerable_app/` - The vulnerable Flask web app (runs on port 5000)
 - `secure_app/` - The fixed and hardened Flask web app (runs on port 5001)
-- `scripts/test_suite.py` - Automated Python unit test suite (12 tests)
-- `scripts/exploit_demo.py` - Script showing the exploit in action
-- `Assignment_Report.md` - My assignment report with STRIDE, DREAD, exploit steps, and code diff
-- `Assignment_Report.html` - Formatted printable version of the report (open in browser to save as PDF)
-- `requirements.txt` - Python dependencies (Flask, requests)
+- `scripts/test_suite.py` - Automated Python unit test suite (17 tests covering CWE-22, CWE-35, and CWE-639)
+- `scripts/exploit_demo.py` - Script showing the exploits in action
+- `Assignment_Report.md` - My full assignment report with STRIDE, per-threat DREAD, exploit steps, and code diff
+- `Assignment_Report.html` - Formatted printable HTML version of the report
+- `CS2341901_Aditya_Ranjan_Kumar_ADS_Assignment_1.docx` - Formatted submission report in Word format
+- `CS2341901_Aditya_Ranjan_Kumar_ADS_Assignment_1.pdf` - Compiled PDF version of the report
+- `requirements.txt` - Python dependencies (Flask, requests, python-docx)
 
 ---
 
@@ -41,11 +43,11 @@ pip install -r requirements.txt
 ```
 
 ### 2. Run the Automated Tests (Fastest check)
-Run the 12 unit tests:
+Run the 17 unit tests:
 ```bash
 python3 scripts/test_suite.py
 ```
-All 12 tests will run and pass, confirming that the exploit works on the vulnerable routes and is blocked on the secure routes.
+All 17 tests will run and pass, confirming that the exploits work on the vulnerable routes and are blocked on the secure routes.
 
 ### 3. Run the Live Demo
 

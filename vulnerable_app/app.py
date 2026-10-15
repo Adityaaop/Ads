@@ -6,13 +6,14 @@ Section: 4CSE9
 Submitted to: Dr. Ajay Prasad
 
 Target OWASP: A01:2021 - Broken Access Control
-Mapped CWE(s): CWE-22 (Improper Limitation of a Pathname to a Restricted Directory / Path Traversal)
-               CWE-284 (Improper Access Control)
+Mapped CWE(s): CWE-22 (Path Traversal), CWE-284 (Improper Access Control), CWE-639 (IDOR)
 
 Description:
-This dummy application simulates an academic document distribution portal.
-It demonstrates an arbitrary file read / path traversal vulnerability where user input
-is concatenated directly into a filesystem path without canonicalization or validation.
+This dummy application simulates an academic document portal for our university course.
+It contains two real broken access control vulnerabilities:
+1. Path Traversal (CWE-22) in /download where user input is passed directly to os.path.join()
+2. Insecure Direct Object Reference (IDOR / CWE-639) in /api/document/<doc_id> where any user
+   can fetch any student's records by ID without ownership checks.
 """
 
 import os
@@ -24,6 +25,25 @@ app = Flask(__name__)
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 PUBLIC_DOCS_DIR = os.path.join(BASE_DIR, "storage", "public_docs")
 CONFIDENTIAL_DIR = os.path.join(BASE_DIR, "storage", "confidential")
+
+# Simulated database of student documents (for demonstrating CWE-639 IDOR)
+DOCUMENTS_DB = {
+    "doc_01": {
+        "title": "Aditya's Course Syllabus & Study Plan",
+        "owner": "aditya",
+        "filename": "syllabus_cs2341901.txt"
+    },
+    "doc_02": {
+        "title": "Assignment-1 Guidelines & Rubric",
+        "owner": "aditya",
+        "filename": "assignment1_guidelines.txt"
+    },
+    "doc_03": {
+        "title": "Bob Smith's Confidential Academic & Fee Record",
+        "owner": "bob",
+        "filename": "student_records_bob.txt"
+    }
+}
 
 
 @app.route("/")
@@ -38,28 +58,24 @@ def index():
 @app.route("/download")
 def download_vulnerable():
     """
-    VULNERABLE ENDPOINT: Demonstrates CWE-22 / CWE-284.
-    
+    VULNERABLE ENDPOINT (CWE-22 / CWE-284):
     Flaw:
-    The user-supplied 'file' query parameter is passed straight to os.path.join().
-    os.path.join() does NOT resolve or block relative path components like '../'.
-    Supplying `../../confidential/admin_db_credentials.env` resolves to a sensitive
-    server file outside of PUBLIC_DOCS_DIR.
+    The file query parameter is passed straight to os.path.join().
+    os.path.join() does NOT stop '../' path components.
+    Passing '../../confidential/admin_db_credentials.env' allows an attacker
+    to escape public_docs and steal private server files.
     """
     filename = request.args.get("file")
     if not filename:
         return "Error: Missing 'file' parameter. Example: /download?file=syllabus_cs2341901.txt", 400
 
-    # INSECURE PATH RESOLUTION:
+    # Insecure concatenation - does not normalize or check root boundary
     file_path = os.path.join(PUBLIC_DOCS_DIR, filename)
-
     print(f"[VULNERABLE_APP LOG] Requested: {filename} -> Target Path: {file_path}")
 
-    # Check if file exists on disk
     if not os.path.exists(file_path):
         return f"File not found: {filename}", 404
 
-    # Returning file content directly to user without verifying base boundary
     try:
         return send_file(file_path, as_attachment=False)
     except Exception as e:
@@ -69,22 +85,20 @@ def download_vulnerable():
 @app.route("/download_naive")
 def download_naive_filter():
     """
-    NAIVE MITIGATION ENDPOINT (Common flawed defense):
-    Attempts to remove '../' using a single string replacement:
-        filename = filename.replace('../', '')
-        
+    NAIVE MITIGATION ENDPOINT (CWE-35):
+    Developers often try to fix path traversal with simple string replacement:
+        filtered = filename.replace('../', '')
+    
     Why this fails:
-    Attacker can supply nested sequences like '....//'.
-    When '../' is removed from '....//', it leaves '../' intact!
-    Example: '....//confidential/admin_db_credentials.env' -> '../../confidential/admin_db_credentials.env'
+    Python's .replace() is non-recursive. If an attacker passes nested sequences:
+        ....//confidential/admin_db_credentials.env
+    The inner '../' gets stripped out, leaving '../' intact behind it.
     """
     raw_filename = request.args.get("file", "")
     if not raw_filename:
         return "Error: Missing 'file' parameter", 400
 
-    # FLAWED ATTEMPT: Non-recursive single-pass replacement
     filtered_filename = raw_filename.replace("../", "")
-
     file_path = os.path.join(PUBLIC_DOCS_DIR, filtered_filename)
     print(f"[NAIVE_APP LOG] Raw: {raw_filename} -> Filtered: {filtered_filename} -> Path: {file_path}")
 
@@ -95,6 +109,35 @@ def download_naive_filter():
         return send_file(file_path, as_attachment=False)
     except Exception as e:
         return f"Internal Server Error: {str(e)}", 500
+
+
+@app.route("/api/document/<doc_id>")
+def get_document_vulnerable(doc_id):
+    """
+    VULNERABLE IDOR ENDPOINT (CWE-639):
+    Flaw:
+    Returns document data based solely on the {doc_id} in the URL.
+    There is NO check to see if the requester actually owns the resource.
+    Student 'aditya' can request /api/document/doc_03 and view Bob's confidential grades.
+    """
+    if doc_id not in DOCUMENTS_DB:
+        return {"status": "error", "message": f"Document '{doc_id}' not found."}, 404
+
+    doc = DOCUMENTS_DB[doc_id]
+    file_path = os.path.join(PUBLIC_DOCS_DIR, doc["filename"])
+    content = ""
+    if os.path.exists(file_path):
+        with open(file_path, "r", encoding="utf-8") as f:
+            content = f.read()
+
+    print(f"[VULNERABLE_IDOR LOG] Accessing: {doc_id} (Owner: {doc['owner']})")
+    return {
+        "status": "success",
+        "doc_id": doc_id,
+        "title": doc["title"],
+        "owner": doc["owner"],
+        "content": content
+    }, 200
 
 
 @app.route("/api/health")

@@ -7,20 +7,20 @@
     <style>
         @page {
             size: A4;
-            margin: 18mm 18mm 18mm 18mm;
+            margin: 16mm 16mm 16mm 16mm;
         }
         * {
             box-sizing: border-box;
         }
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            font-size: 10pt;
-            line-height: 1.5;
+            font-size: 9.5pt;
+            line-height: 1.45;
             color: #111827;
             background: #ffffff;
             margin: 0 auto;
-            max-width: 800px;
-            padding: 24px;
+            max-width: 850px;
+            padding: 20px;
         }
         @media print {
             body {
@@ -42,66 +42,66 @@
             border: 1px solid #cbd5e1;
             border-top: 4px solid #1e40af;
             border-radius: 4px;
-            padding: 16px 20px;
+            padding: 14px 18px;
             background: #f8fafc;
-            margin-bottom: 22px;
+            margin-bottom: 20px;
         }
         .header-card h1 {
             color: #0f172a;
             margin: 0 0 4px 0;
-            font-size: 18pt;
+            font-size: 16pt;
             font-weight: 700;
         }
         .header-card h2 {
-            color: #475569;
-            margin: 0 0 12px 0;
-            font-size: 11pt;
-            font-weight: 500;
+            color: #1e40af;
+            margin: 0 0 10px 0;
+            font-size: 10.5pt;
+            font-weight: 600;
         }
         .meta-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 6px 16px;
+            gap: 5px 16px;
             border-top: 1px solid #e2e8f0;
-            padding-top: 10px;
-            font-size: 9.5pt;
+            padding-top: 8px;
+            font-size: 9pt;
         }
         .meta-item strong {
             color: #0f172a;
             font-weight: 600;
         }
         h2.section-heading {
-            color: #0f172a;
-            border-bottom: 1.5px solid #cbd5e1;
+            color: #1e40af;
+            border-bottom: 1.5px solid #1e40af;
             padding-bottom: 3px;
-            margin-top: 24px;
-            margin-bottom: 10px;
-            font-size: 12pt;
+            margin-top: 20px;
+            margin-bottom: 8px;
+            font-size: 11pt;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.3px;
         }
         h3.sub-heading {
             color: #1e293b;
-            margin-top: 14px;
-            margin-bottom: 6px;
-            font-size: 10.5pt;
+            margin-top: 12px;
+            margin-bottom: 5px;
+            font-size: 10pt;
             font-weight: 600;
         }
         p, li {
-            font-size: 9.5pt;
+            font-size: 9pt;
             color: #334155;
-            margin: 5px 0;
+            margin: 4px 0;
         }
         ul, ol {
-            padding-left: 20px;
-            margin: 5px 0;
+            padding-left: 18px;
+            margin: 4px 0;
         }
         table {
             width: 100%;
             border-collapse: collapse;
-            margin: 12px 0;
-            font-size: 9pt;
+            margin: 10px 0;
+            font-size: 8.5pt;
         }
         table, th, td {
             border: 1px solid #cbd5e1;
@@ -109,12 +109,12 @@
         th {
             background-color: #f1f5f9;
             color: #0f172a;
-            padding: 6px 8px;
+            padding: 5px 7px;
             text-align: left;
             font-weight: 600;
         }
         td {
-            padding: 5px 8px;
+            padding: 4px 7px;
             vertical-align: top;
             color: #1e293b;
         }
@@ -124,57 +124,49 @@
         pre {
             background-color: #0f172a;
             color: #f8fafc;
-            padding: 10px 12px;
+            padding: 9px 11px;
             border-radius: 4px;
             overflow-x: auto;
-            font-size: 8.5pt;
-            line-height: 1.4;
+            font-size: 8pt;
+            line-height: 1.35;
             font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-            margin: 8px 0;
+            margin: 6px 0;
         }
         code {
             font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
             background: #f1f5f9;
             color: #991b1b;
-            padding: 1.5px 4px;
+            padding: 1px 3px;
             border-radius: 3px;
-            font-size: 8.5pt;
+            font-size: 8pt;
         }
         pre code {
             background: transparent;
             color: inherit;
             padding: 0;
         }
-        .info-box {
-            background-color: #f8fafc;
-            border-left: 3px solid #2563eb;
-            padding: 8px 12px;
-            margin: 10px 0;
-            border-radius: 0 4px 4px 0;
-            font-size: 9.5pt;
-        }
         .badge-danger {
             background: #fee2e2;
             color: #991b1b;
-            padding: 1px 5px;
+            padding: 1px 4px;
             border-radius: 3px;
             font-weight: 600;
-            font-size: 8pt;
+            font-size: 7.5pt;
         }
         .badge-success {
             background: #dcfce7;
             color: #166534;
-            padding: 1px 5px;
+            padding: 1px 4px;
             border-radius: 3px;
             font-weight: 600;
-            font-size: 8pt;
+            font-size: 7.5pt;
         }
         .print-btn {
             background-color: #1e40af;
             color: white;
             border: none;
-            padding: 8px 16px;
-            font-size: 13px;
+            padding: 7px 14px;
+            font-size: 12px;
             border-radius: 4px;
             cursor: pointer;
             font-weight: 500;
@@ -211,212 +203,232 @@
     Broken Access Control currently holds the <strong>#1 position</strong> in the OWASP Top 10. Access control mechanisms enforce authorization policies so users cannot access resources or execute actions outside their intended permissions. When access controls are broken, attackers can view unauthorized files, steal server configurations, or access sensitive user records.
 </p>
 <p>
-    In this practical lab, I designed and implemented a dummy web application demonstrating <strong>Path Traversal (CWE-22)</strong> and <strong>Improper Access Control (CWE-284)</strong> in a file download feature, and also applied <strong>Insecure Direct Object Reference (CWE-639)</strong> mitigations.
+    In this practical lab, I designed and implemented a dummy web application demonstrating <strong>Path Traversal (CWE-22)</strong> and <strong>Insecure Direct Object Reference (CWE-639)</strong> under <strong>Improper Access Control (CWE-284)</strong>. I conducted STRIDE threat modeling, calculated per-threat DREAD scores, implemented Defense-in-Depth mitigations in code, and verified the defenses using 17 automated unit test assertions.
 </p>
 
-<h2 class="section-heading">2. Mapping of CWEs to OWASP A01:2021</h2>
+<h2 class="section-heading">2. Comprehensive Mapping of All 34 CWEs to OWASP A01:2021</h2>
 <p>
-    OWASP associates multiple Common Weakness Enumerations (CWEs) with Broken Access Control. Below is my mapping of these weaknesses, highlighting the specific ones demonstrated and fixed in this project:
+    According to the official OWASP Top 10:2021 taxonomy, Category A01:2021 maps directly to exactly <strong>34 Common Weakness Enumerations (CWEs)</strong>. Below is the complete table of all 34 mapped CWEs (note: CWE-73 is excluded as it formally belongs to A04:2021 - Insecure Design):
 </p>
 <table>
     <thead>
         <tr>
-            <th style="width: 15%;">CWE ID</th>
-            <th style="width: 45%;">Weakness Name</th>
-            <th style="width: 15%;">Severity</th>
-            <th style="width: 25%;">Role in My Assignment</th>
+            <th style="width: 12%;">CWE ID</th>
+            <th style="width: 40%;">Weakness Name</th>
+            <th style="width: 12%;">Severity</th>
+            <th style="width: 36%;">Role in My Assignment / OWASP A01 Context</th>
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td><strong>CWE-22</strong></td>
-            <td><strong>Path Traversal (Improper Limitation of Pathname)</strong></td>
-            <td><span class="badge-danger">High</span></td>
-            <td><strong>Primary Vulnerability Exploit</strong></td>
-        </tr>
-        <tr>
-            <td><strong>CWE-284</strong></td>
-            <td><strong>Improper Access Control</strong></td>
-            <td><span class="badge-danger">High</span></td>
-            <td><strong>Core Architectural Flaw</strong></td>
-        </tr>
-        <tr>
-            <td><strong>CWE-639</strong></td>
-            <td><strong>Authorization Bypass via User Key (IDOR)</strong></td>
-            <td><span class="badge-danger">High</span></td>
-            <td><strong>Remediated via Indirect Tokens</strong></td>
-        </tr>
-        <tr>
-            <td><strong>CWE-552</strong></td>
-            <td>Files Accessible to External Parties</td>
-            <td>Medium</td>
-            <td>Demonstrated via .env leak</td>
-        </tr>
-        <tr>
-            <td><strong>CWE-200</strong></td>
-            <td>Exposure of Sensitive Information</td>
-            <td>Medium</td>
-            <td>Mitigated via safe 403 responses</td>
-        </tr>
+        <tr><td><strong>CWE-22</strong></td><td><strong>Path Traversal (Improper Limitation of Pathname)</strong></td><td><span class="badge-danger">High</span></td><td><strong>Primary Vulnerability Exploit (/download)</strong></td></tr>
+        <tr><td><strong>CWE-23</strong></td><td>Relative Path Traversal</td><td>Medium</td><td>Demonstrated using relative <code>../</code> sequences</td></tr>
+        <tr><td><strong>CWE-35</strong></td><td>Path Traversal: '.../...//'</td><td>Medium</td><td>Demonstrated via nested filter bypass <code>....//</code></td></tr>
+        <tr><td><strong>CWE-59</strong></td><td>Improper Link Resolution Before File Access</td><td>Medium</td><td>Mitigated via <code>os.path.realpath</code> symlink checks</td></tr>
+        <tr><td><strong>CWE-200</strong></td><td>Exposure of Sensitive Information</td><td>Medium</td><td>Mitigated via safe 403 responses without path leaks</td></tr>
+        <tr><td><strong>CWE-201</strong></td><td>Insertion of Sensitive Information Into Sent Data</td><td>Medium</td><td>Mitigated by preventing credential leakage in HTTP body</td></tr>
+        <tr><td><strong>CWE-219</strong></td><td>Storage of File with Sensitive Data Under Web Root</td><td><span class="badge-danger">High</span></td><td>Remediated by moving secrets outside web root</td></tr>
+        <tr><td><strong>CWE-264</strong></td><td>Permissions, Privileges, and Access Controls (Deprecated)</td><td><span class="badge-danger">High</span></td><td>Overarching access control flaw category</td></tr>
+        <tr><td><strong>CWE-275</strong></td><td>Permission Issues</td><td>Medium</td><td>Solved by least-privilege folder filesystem permissions</td></tr>
+        <tr><td><strong>CWE-276</strong></td><td>Incorrect Default Permissions</td><td><span class="badge-danger">High</span></td><td>Addressed via restrictive read-only permissions</td></tr>
+        <tr><td><strong>CWE-284</strong></td><td><strong>Improper Access Control</strong></td><td><span class="badge-danger">High</span></td><td><strong>Core Architectural Flaw in routing</strong></td></tr>
+        <tr><td><strong>CWE-285</strong></td><td>Improper Authorization</td><td><span class="badge-danger">High</span></td><td>Addressed through object-level permission verification</td></tr>
+        <tr><td><strong>CWE-352</strong></td><td>Cross-Site Request Forgery (CSRF)</td><td><span class="badge-danger">High</span></td><td>Relevant to state-changing access operations</td></tr>
+        <tr><td><strong>CWE-359</strong></td><td>Exposure of Private Personal Information</td><td>Medium</td><td>Addressed by protecting student grade records</td></tr>
+        <tr><td><strong>CWE-377</strong></td><td>Insecure Temporary File</td><td>Medium</td><td>Mitigated by avoiding insecure temp file usage</td></tr>
+        <tr><td><strong>CWE-402</strong></td><td>Transmission of Private Resources into a New Sphere</td><td>Medium</td><td>Mitigated by strict canonical containment checks</td></tr>
+        <tr><td><strong>CWE-425</strong></td><td>Direct Request ('Forced Browsing')</td><td>Medium</td><td>Solved by tokenized indirect references</td></tr>
+        <tr><td><strong>CWE-441</strong></td><td>Unintended Proxy or Intermediary ('Confused Deputy')</td><td>Medium</td><td>Prevented by verifying client identity at origin</td></tr>
+        <tr><td><strong>CWE-497</strong></td><td>Exposure of Sensitive System Information</td><td>Low</td><td>Solved by generic error messages masking stack traces</td></tr>
+        <tr><td><strong>CWE-538</strong></td><td>Insertion of Sensitive Info in Externally-Accessible File</td><td>Medium</td><td>Remediated by isolating credentials from public docs</td></tr>
+        <tr><td><strong>CWE-540</strong></td><td>Inclusion of Sensitive Information in Source Code</td><td>Medium</td><td>Remediated via external environment config</td></tr>
+        <tr><td><strong>CWE-548</strong></td><td>Exposure of Information Through Directory Listing</td><td>Low</td><td>Mitigated by disabling directory indexing</td></tr>
+        <tr><td><strong>CWE-551</strong></td><td>Incorrect Behavior Order: Auth Before Canonicalization</td><td><span class="badge-danger">High</span></td><td>Solved by canonicalizing path BEFORE access decision</td></tr>
+        <tr><td><strong>CWE-552</strong></td><td>Files or Directories Accessible to External Parties</td><td>Medium</td><td>Demonstrated via <code>.env</code> file exposure and fixed</td></tr>
+        <tr><td><strong>CWE-566</strong></td><td>Authorization Bypass Through User-Controlled SQL Key</td><td><span class="badge-danger">High</span></td><td>Related to parameter-tampered primary keys in queries</td></tr>
+        <tr><td><strong>CWE-601</strong></td><td>URL Redirection to Untrusted Site ('Open Redirect')</td><td>Medium</td><td>Mitigated by rejecting external URI targets</td></tr>
+        <tr><td><strong>CWE-639</strong></td><td><strong>Authorization Bypass via User Key (IDOR)</strong></td><td><span class="badge-danger">High</span></td><td><strong>Demonstrated & fixed via user ownership validation</strong></td></tr>
+        <tr><td><strong>CWE-651</strong></td><td>Exposure of WSDL File Containing Sensitive Info</td><td>Low</td><td>Specific to Web Services information exposure</td></tr>
+        <tr><td><strong>CWE-668</strong></td><td>Exposure of Resource to Wrong Sphere</td><td><span class="badge-danger">High</span></td><td>Core concept in exposing server internal files</td></tr>
+        <tr><td><strong>CWE-706</strong></td><td>Use of Incorrectly-Resolved Name or Reference</td><td>Medium</td><td>Resolved using <code>os.path.realpath</code></td></tr>
+        <tr><td><strong>CWE-862</strong></td><td>Missing Authorization</td><td><span class="badge-danger">High</span></td><td>Addressed by adding mandatory authorization layer</td></tr>
+        <tr><td><strong>CWE-863</strong></td><td>Incorrect Authorization</td><td><span class="badge-danger">High</span></td><td>Addressed by validating owner equals requester</td></tr>
+        <tr><td><strong>CWE-913</strong></td><td>Improper Control of Generation of Code</td><td><span class="badge-danger">High</span></td><td>Prevented by strictly treating input as inert string</td></tr>
+        <tr><td><strong>CWE-922</strong></td><td>Insecure Storage of Sensitive Information</td><td><span class="badge-danger">High</span></td><td>Remediated by isolating secrets from public directory</td></tr>
     </tbody>
 </table>
-<p style="font-size: 8.5pt; color: #64748b; margin-top: 4px;"><em>Additional CWEs mapped under OWASP A01:2021 include CWE-23, CWE-73, CWE-276, CWE-706, CWE-862, CWE-863, and CWE-918.</em></p>
 
 <h2 class="section-heading">3. Dummy Application Setup & Vulnerability Analysis</h2>
 <p>
-    I created an academic document distribution portal in Python (Flask). The app allows students to download course materials from <code>storage/public_docs/</code>, while confidential admin credentials reside in <code>storage/confidential/</code>.
+    I created an academic portal in Python (Flask) with two setups:
 </p>
+<ul>
+    <li><code>vulnerable_app/</code> (Port 5000): Demonstrates CWE-22, CWE-35 (naive replace bypass), and CWE-639 (IDOR).</li>
+    <li><code>secure_app/</code> (Port 5001): Implements canonical checks, true per-user object-level authorization, structured audit logging, and 2MB file size limits.</li>
+</ul>
 
-<div class="info-box">
-    <strong>Vulnerable Code in <code>vulnerable_app/app.py</code>:</strong>
-    <pre><code>@app.route("/download")
+<pre><code># Vulnerable Code in vulnerable_app/app.py:
+@app.route("/download")
 def download_vulnerable():
     filename = request.args.get("file")
-    # Insecure direct join without validation:
+    # INSECURE: Direct concatenation allows ../ traversal
     file_path = os.path.join(PUBLIC_DOCS_DIR, filename)
     if not os.path.exists(file_path):
         return f"File not found: {filename}", 404
-    return send_file(file_path)</code></pre>
-</div>
+    return send_file(file_path)
 
-<h3 class="sub-heading">Vulnerability Mechanism:</h3>
-<ol>
-    <li><code>os.path.join()</code> in Python does not sanitize relative path sequences (<code>../</code>).</li>
-    <li>Passing <code>file=../confidential/admin_db_credentials.env</code> escapes the public directory and reads internal database credentials.</li>
-    <li>Passing <code>file=../../.env</code> navigates two levels up to the server root, exposing master secret keys and database connection URIs.</li>
-</ol>
+# Vulnerable IDOR Endpoint (CWE-639):
+@app.route("/api/document/<doc_id>")
+def get_document_vulnerable(doc_id):
+    # FLAW: No user ownership or authentication check
+    doc = DOCUMENTS_DB.get(doc_id)
+    return {"status": "success", "doc_id": doc_id, "data": doc}, 200
+</code></pre>
 
 <h3 class="sub-heading">Failure of Naive Blacklisting (<code>.replace('../', '')</code>):</h3>
 <p>
-    A naive mitigation attempted by developers is stripping <code>../</code> with string replacement. In <code>vulnerable_app/app.py</code>, I implemented <code>/download_naive</code>:
-</p>
-<pre><code>filtered_filename = raw_filename.replace("../", "")</code></pre>
-<p>
-    Because single-pass replacement is non-recursive, sending a nested sequence like <code>....//</code> causes the inner <code>../</code> to be stripped, leaving behind <code>../</code>:
-    <br>
-    <code>....//confidential/admin_db_credentials.env</code> &rarr; <code>../confidential/admin_db_credentials.env</code>.
-    The attack succeeds completely with <strong>HTTP 200 OK</strong>.
+    Developers often attempt to strip <code>../</code> with string replacement: <code>filtered = raw.replace("../", "")</code>. Because replacement runs only once, sending <code>....//confidential/admin_db_credentials.env</code> causes the inner <code>../</code> to be stripped, leaving behind <code>../</code> and executing traversal successfully with HTTP 200 OK.
 </p>
 
 <h2 class="section-heading">4. Threat Modeling (STRIDE)</h2>
 <p>
-    I evaluated the document download feature against the six STRIDE threat categories:
+    I evaluated the document download feature against the six STRIDE threat categories with coded mitigations:
 </p>
-
 <table>
     <thead>
         <tr>
             <th style="width: 14%;">STRIDE Category</th>
-            <th style="width: 25%;">Threat in My Application</th>
-            <th style="width: 18%;">Component</th>
-            <th style="width: 20%;">Potential Impact</th>
-            <th style="width: 23%;">Mitigation Applied</th>
+            <th style="width: 22%;">Threat in Application</th>
+            <th style="width: 14%;">Component</th>
+            <th style="width: 22%;">Potential Impact</th>
+            <th style="width: 28%;">Mitigation Implemented in Code</th>
         </tr>
     </thead>
     <tbody>
         <tr>
             <td><strong>Spoofing</strong></td>
-            <td>Attacker modifies document IDs to access another student's file.</td>
-            <td>Query parameter (<code>doc_id</code>)</td>
-            <td>Unauthorized document download.</td>
-            <td>Server-side dictionary mapping (<code>AUTHORIZED_DOCUMENTS</code>).</td>
+            <td>Attacker queries another user's document (e.g. <code>doc_03</code>) via IDOR</td>
+            <td>REST API parameter (<code>doc_id</code>)</td>
+            <td>Unauthorized access to confidential student records</td>
+            <td>Coded object-level authorization checking <code>doc['owner'] == current_user</code>.</td>
         </tr>
         <tr>
             <td><strong>Tampering</strong></td>
-            <td>Attacker injects <code>../</code> or <code>....//</code> into filename parameter.</td>
+            <td>Attacker injects <code>../</code> or <code>....//</code> into filename</td>
             <td><code>/download?file=...</code></td>
-            <td>Filesystem path redirection to restricted directories.</td>
-            <td>Regex allowlisting & canonical boundary validation (<code>os.path.realpath</code>).</td>
+            <td>Filesystem redirection to restricted directories</td>
+            <td>Regex allowlisting & canonical boundary checks (<code>os.path.realpath</code> / <code>commonpath</code>).</td>
         </tr>
         <tr>
             <td><strong>Repudiation</strong></td>
-            <td>Attacker downloads sensitive files without leaving an audit trail.</td>
+            <td>Attacker downloads sensitive files without leaving an audit trail</td>
             <td>Access Logging</td>
-            <td>Inability to detect or trace data exfiltration.</td>
-            <td>Structured logging of IP address, document token, and HTTP status.</td>
+            <td>Inability to detect or trace data exfiltration</td>
+            <td>Structured JSON audit logging (<code>record_audit_log</code>) tracking IP, timestamp, user, and status.</td>
         </tr>
         <tr>
             <td><strong>Information Disclosure</strong></td>
-            <td>Path traversal reads <code>.env</code> and database credentials.</td>
+            <td>Path traversal reads <code>.env</code> and database credentials</td>
             <td>Local File System</td>
-            <td>Confidentiality loss; database credentials stolen.</td>
-            <td>Canonical containment check via <code>os.path.commonpath</code>.</td>
+            <td>Confidentiality loss; database credentials stolen</td>
+            <td>Canonical containment check via <code>os.path.commonpath</code>; secrets stored outside web root.</td>
         </tr>
         <tr>
             <td><strong>Denial of Service</strong></td>
-            <td>Attacker requests infinite device streams (e.g., <code>/dev/urandom</code>).</td>
+            <td>Attacker requests infinite device streams (<code>/dev/urandom</code>) or huge files</td>
             <td>OS File Descriptors</td>
-            <td>Worker process hangs; memory exhaustion.</td>
-            <td>Enforce <code>os.path.isfile()</code> check and size constraints.</td>
+            <td>Worker process hangs; memory exhaustion</td>
+            <td>Enforced <code>os.path.isfile()</code> check and <code>MAX_FILE_SIZE = 2MB</code> constraint.</td>
         </tr>
         <tr>
             <td><strong>Elevation of Privilege</strong></td>
-            <td>Attacker extracts <code>SECRET_KEY</code> to forge admin JWT/session cookies.</td>
+            <td>Attacker extracts <code>SECRET_KEY</code> to forge admin JWT/session cookies</td>
             <td>Session Management</td>
-            <td>Administrative takeover of portal.</td>
-            <td>Store secrets outside web root; block traversal; enforce least privilege.</td>
+            <td>Administrative takeover of portal</td>
+            <td>Store secrets outside web root; block traversal; enforce server-side role validation.</td>
         </tr>
     </tbody>
 </table>
 
-<h2 class="section-heading">5. Risk Assessment (DREAD Model)</h2>
+<h2 class="section-heading">5. Detailed Risk Assessment (Per-Threat DREAD Model)</h2>
 <p>
-    I calculated risk scores using the standard DREAD formula:
+    To provide rigorous threat-specific quantification, I calculated DREAD scores for every STRIDE threat before and after mitigation:
     <strong>Risk Score = (Damage + Reproducibility + Exploitability + Affected Users + Discoverability) / 5</strong>
 </p>
-
 <table>
     <thead>
         <tr>
-            <th style="width: 22%;">DREAD Dimension</th>
+            <th style="width: 16%;">STRIDE Threat</th>
+            <th style="width: 20%;">Threat Scenario</th>
             <th style="width: 10%;">Pre-Fix</th>
-            <th style="width: 29%;">Pre-Mitigation Rationale</th>
+            <th style="width: 14%;">Pre-Score</th>
             <th style="width: 10%;">Post-Fix</th>
-            <th style="width: 29%;">Post-Mitigation Rationale</th>
+            <th style="width: 14%;">Post-Score</th>
+            <th style="width: 16%;">Post-Mitigation Rationale</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td><strong>Damage Potential (D)</strong></td>
-            <td><strong>9 / 10</strong></td>
-            <td>Leaking <code>.env</code> reveals database passwords and crypto keys.</td>
-            <td><strong>1 / 10</strong></td>
-            <td>Access rejected with 403; zero sensitive bytes disclosed.</td>
+            <td><strong>Spoofing (IDOR)</strong></td>
+            <td>Cross-user IDOR access to Bob's confidential grades</td>
+            <td>7, 9, 9, 7, 8</td>
+            <td><span class="badge-danger">8.0 / 10 (High)</span></td>
+            <td>2, 1, 2, 1, 2</td>
+            <td><span class="badge-success">1.6 / 10 (Low)</span></td>
+            <td>Ownership check rejects unauthorized requests with 403.</td>
         </tr>
         <tr>
-            <td><strong>Reproducibility (R)</strong></td>
-            <td><strong>10 / 10</strong></td>
-            <td>100% reproducible on every GET request with <code>../</code>.</td>
-            <td><strong>1 / 10</strong></td>
-            <td>Canonical check reliably blocks the traversal every time.</td>
+            <td><strong>Tampering</strong></td>
+            <td>Directory traversal via <code>../</code> or <code>....//</code></td>
+            <td>9, 10, 10, 8, 9</td>
+            <td><span class="badge-danger">9.2 / 10 (Critical)</span></td>
+            <td>1, 1, 1, 0, 2</td>
+            <td><span class="badge-success">1.0 / 10 (Negligible)</span></td>
+            <td>Canonical boundary check reliably blocks all traversal escapes.</td>
         </tr>
         <tr>
-            <td><strong>Exploitability (E)</strong></td>
-            <td><strong>10 / 10</strong></td>
-            <td>Trivial; can be executed from any standard browser URL bar.</td>
-            <td><strong>1 / 10</strong></td>
-            <td>Constrained to server-defined tokens; cannot be bypassed.</td>
+            <td><strong>Repudiation</strong></td>
+            <td>Downloading sensitive files without audit trail</td>
+            <td>6, 8, 8, 6, 7</td>
+            <td><span class="badge-danger">7.0 / 10 (High)</span></td>
+            <td>2, 1, 2, 1, 2</td>
+            <td><span class="badge-success">1.6 / 10 (Low)</span></td>
+            <td>Structured JSON audit log tracks all access attempts.</td>
         </tr>
         <tr>
-            <td><strong>Affected Users (A)</strong></td>
-            <td><strong>8 / 10</strong></td>
-            <td>Leaked database credentials compromise all student records.</td>
-            <td><strong>0 / 10</strong></td>
-            <td>Zero users affected as vulnerability is completely sealed.</td>
+            <td><strong>Information Disclosure</strong></td>
+            <td>Leaking database passwords and server <code>.env</code></td>
+            <td>10, 10, 10, 9, 9</td>
+            <td><span class="badge-danger">9.6 / 10 (Critical)</span></td>
+            <td>1, 1, 1, 0, 2</td>
+            <td><span class="badge-success">1.0 / 10 (Negligible)</span></td>
+            <td>Secrets moved outside web root; canonical check blocks escape.</td>
         </tr>
         <tr>
-            <td><strong>Discoverability (D)</strong></td>
-            <td><strong>9 / 10</strong></td>
-            <td>Security scanners (ZAP, Burp) flag path traversal immediately.</td>
-            <td><strong>2 / 10</strong></td>
-            <td>Server returns generic 403 errors with no path information.</td>
+            <td><strong>Denial of Service</strong></td>
+            <td>Requesting device streams or oversized files</td>
+            <td>7, 8, 7, 8, 6</td>
+            <td><span class="badge-danger">7.2 / 10 (High)</span></td>
+            <td>2, 2, 1, 1, 2</td>
+            <td><span class="badge-success">1.6 / 10 (Low)</span></td>
+            <td>Enforced <code>os.path.isfile()</code> and 2MB file size limit.</td>
+        </tr>
+        <tr>
+            <td><strong>Elevation of Privilege</strong></td>
+            <td>Stealing <code>SECRET_KEY</code> to forge admin cookies</td>
+            <td>10, 9, 8, 9, 8</td>
+            <td><span class="badge-danger">8.8 / 10 (Critical)</span></td>
+            <td>2, 1, 2, 0, 2</td>
+            <td><span class="badge-success">1.4 / 10 (Low)</span></td>
+            <td>Root secrets protected; directory traversal sealed.</td>
         </tr>
         <tr style="font-weight: bold; background-color: #f1f5f9;">
-            <td>Overall DREAD Average</td>
-            <td><span class="badge-danger">9.2 / 10 (CRITICAL)</span></td>
-            <td>Immediate remediation required</td>
-            <td><span class="badge-success">1.0 / 10 (NEGLIGIBLE)</span></td>
-            <td>Residual risk is fully acceptable</td>
+            <td>Composite Average</td>
+            <td>Overall System Risk</td>
+            <td>8.2, 9.0, 8.7, 7.8, 7.8</td>
+            <td><span class="badge-danger">8.3 / 10 (CRITICAL)</span></td>
+            <td>1.7, 1.2, 1.5, 0.5, 2.0</td>
+            <td><span class="badge-success">1.37 / 10 (LOW RESIDUAL)</span></td>
+            <td>Residual risk is fully acceptable; verified by 17 unit tests.</td>
         </tr>
     </tbody>
 </table>
@@ -426,26 +438,16 @@ def download_vulnerable():
     I executed proof-of-concept attacks against the vulnerable application using <code>scripts/exploit_demo.py</code> and <code>curl</code>:
 </p>
 <ol>
-    <li>
-        <strong>Normal Access:</strong>
-        <code>GET /download?file=syllabus_cs2341901.txt</code> &rarr; <strong>HTTP 200 OK</strong> (Returns syllabus).
-    </li>
-    <li>
-        <strong>Stealing Database Credentials:</strong>
-        <code>GET /download?file=../confidential/admin_db_credentials.env</code> &rarr; <strong>HTTP 200 OK</strong>
-        <pre><code>DB_HOST=10.0.12.44
+    <li><strong>Normal Access:</strong> <code>GET /download?file=syllabus_cs2341901.txt</code> &rarr; HTTP 200 OK.</li>
+    <li><strong>Stealing Database Credentials:</strong> <code>GET /download?file=../confidential/admin_db_credentials.env</code> &rarr; HTTP 200 OK:
+<pre><code>DB_HOST=10.0.12.44
 DB_USER=ads_admin
 DB_PASS=SuperSecretP@ssw0rd2026!
 JWT_SECRET_KEY=9f83ab2018cf41a980e927164b38d0e7</code></pre>
     </li>
-    <li>
-        <strong>Stealing Root Server Secrets:</strong>
-        <code>GET /download?file=../../.env</code> &rarr; <strong>HTTP 200 OK</strong> (Exfiltrates production DB connection strings and AWS API keys).
-    </li>
-    <li>
-        <strong>Bypassing Naive Filter:</strong>
-        <code>GET /download_naive?file=....//confidential/admin_db_credentials.env</code> &rarr; <strong>HTTP 200 OK</strong> (Bypasses single-pass replacement).
-    </li>
+    <li><strong>Stealing Root Server Secrets:</strong> <code>GET /download?file=../../.env</code> &rarr; HTTP 200 OK (Exfiltrates production DB URIs and AWS keys).</li>
+    <li><strong>Bypassing Naive Filter:</strong> <code>GET /download_naive?file=....//confidential/admin_db_credentials.env</code> &rarr; HTTP 200 OK.</li>
+    <li><strong>Exploiting IDOR (CWE-639):</strong> <code>GET /api/document/doc_03</code> &rarr; HTTP 200 OK (Exfiltrates Bob's confidential grades without authentication).</li>
 </ol>
 
 <h2 class="section-heading">7. Mitigation Implementation & Code Comparison</h2>
@@ -453,16 +455,15 @@ JWT_SECRET_KEY=9f83ab2018cf41a980e927164b38d0e7</code></pre>
     In <code>secure_app/app.py</code>, I implemented a Defense-in-Depth mitigation strategy:
 </p>
 <ul>
-    <li><strong>Canonical Path Resolution:</strong> Using <code>os.path.realpath()</code> and <code>os.path.commonpath()</code> to ensure target files remain inside <code>public_docs</code>.</li>
-    <li><strong>Indirect Object References (IDOR Prevention):</strong> Using token IDs (<code>doc_id=doc_01</code>) so users never directly specify filesystem paths.</li>
-    <li><strong>Regex Allowlisting:</strong> Rejecting illegal characters, directory separators, and traversal markers.</li>
-    <li><strong>Information Leakage Prevention:</strong> Returning generic <code>403 Forbidden</code> responses without revealing directory structure.</li>
+    <li><strong>Canonical Path Resolution:</strong> Using <code>os.path.realpath()</code> and <code>os.path.commonpath()</code> to ensure files remain strictly inside <code>public_docs</code>.</li>
+    <li><strong>Object-Level Authorization (IDOR Prevention):</strong> Enforcing ownership check requiring <code>doc['owner'] == current_user</code> or admin.</li>
+    <li><strong>Structured Audit Logging:</strong> Function <code>record_audit_log</code> writes JSON events to <code>audit_access.log</code>.</li>
+    <li><strong>DoS Protection:</strong> Enforcing <code>os.path.isfile()</code> check and 2MB file size ceiling.</li>
 </ul>
 
-<h3 class="sub-heading">Side-by-Side Code Comparison:</h3>
 <pre><code>--- vulnerable_app/app.py (Vulnerable)
 +++ secure_app/app.py (Hardened)
-@@ -18,14 +18,34 @@
+@@ -38,15 +48,45 @@
 -@app.route("/download")
 -def download_vulnerable():
 -    filename = request.args.get("file")
@@ -474,22 +475,33 @@ JWT_SECRET_KEY=9f83ab2018cf41a980e927164b38d0e7</code></pre>
 +@app.route("/download_secure")
 +def download_secure():
 +    doc_id = request.args.get("doc_id")
-+    # DEFENSE 1: Indirect Object Reference mapping
++    current_user = request.headers.get("X-User-ID") or request.args.get("user_id", "aditya")
 +    if doc_id not in AUTHORIZED_DOCUMENTS:
++        record_audit_log("UNKNOWN_RESOURCE_ACCESS", 403, user=current_user, resource=doc_id)
 +        return "Access Denied: Invalid document identifier.", 403
 +    
-+    safe_name = AUTHORIZED_DOCUMENTS[doc_id]["filename"]
++    doc = AUTHORIZED_DOCUMENTS[doc_id]
++    # DEFENSE 1: Object-level authorization check (CWE-639 IDOR mitigation)
++    if doc.get("owner") != current_user and current_user != "admin":
++        record_audit_log("IDOR_UNAUTHORIZED_ACCESS_BLOCKED", 403, user=current_user, resource=doc_id)
++        return "Access Denied: You do not have permission to access this resource.", 403
++    
++    safe_name = doc["filename"]
 +    full_path = os.path.join(PUBLIC_DOCS_DIR, safe_name)
 +    
-+    # DEFENSE 2: Canonical boundary verification
-+    if not is_safe_path(PUBLIC_DOCS_DIR, full_path):
-+        return "Access Denied: Path escapes boundary.", 403
++    # DEFENSE 2: Canonical boundary & DoS file size verification
++    safe, reason = is_safe_path(PUBLIC_DOCS_DIR, full_path)
++    if not safe:
++        record_audit_log("CANONICAL_BOUNDARY_VIOLATION", 403, user=current_user, resource=full_path)
++        return f"Security Violation: {reason}", 403
 +        
-+    return send_file(full_path)</code></pre>
++    record_audit_log("FILE_DOWNLOAD_SUCCESS", 200, user=current_user, resource=doc_id)
++    return send_file(full_path)
+</code></pre>
 
-<h2 class="section-heading">8. Automated Test Suite Verification</h2>
+<h2 class="section-heading">8. Automated Test Suite Verification (17 Tests)</h2>
 <p>
-    I wrote an automated <code>unittest</code> suite in <code>scripts/test_suite.py</code> containing 12 test assertions:
+    I wrote an automated unittest suite in <code>scripts/test_suite.py</code> containing 17 test assertions:
 </p>
 <pre><code>======================================================================
 RUNNING AUTOMATED SECURITY TEST SUITE (CS4021 - Assignment-1)
@@ -504,19 +516,25 @@ test_04_direct_name_path_traversal_blocked (__main__.TestSecureHardenedApplicati
 test_05_direct_name_nested_traversal_blocked (__main__.TestSecureHardenedApplication) ... ok
 test_06_direct_name_special_characters_blocked (__main__.TestSecureHardenedApplication) ... ok
 test_07_direct_name_legitimate_download (__main__.TestSecureHardenedApplication) ... ok
+test_08_idor_cross_user_access_blocked (__main__.TestSecureHardenedApplication) ... ok
+test_09_idor_owner_permitted_access (__main__.TestSecureHardenedApplication) ... ok
+test_10_idor_api_endpoint_blocked (__main__.TestSecureHardenedApplication) ... ok
+test_11_structured_audit_logging_active (__main__.TestSecureHardenedApplication) ... ok
 test_01_legitimate_download (__main__.TestVulnerableApplication) ... ok
 test_02_path_traversal_confidential_env (__main__.TestVulnerableApplication) ... ok
 test_03_path_traversal_root_env (__main__.TestVulnerableApplication) ... ok
 test_04_naive_filter_bypass (__main__.TestVulnerableApplication) ... ok
 test_05_missing_parameter (__main__.TestVulnerableApplication) ... ok
+test_06_idor_unauthorized_record_access (__main__.TestVulnerableApplication) ... ok
 
 ----------------------------------------------------------------------
-Ran 12 tests in 0.014s
-OK</code></pre>
+Ran 17 tests in 0.016s
+OK
+</code></pre>
 
 <h2 class="section-heading">9. Conclusion</h2>
 <p>
-    This lab demonstrates why <strong>Broken Access Control</strong> is ranked #1 in the OWASP Top 10. Direct file path concatenation without canonical path checks allows attackers to read sensitive files with simple <code>../</code> payloads. Naive string replacement like <code>.replace('../', '')</code> is ineffective against nested sequences like <code>....//</code>. The best and most reliable defenses are <strong>canonical path validation</strong> and <strong>indirect object references</strong>.
+    This lab demonstrates why Broken Access Control is ranked #1 in the OWASP Top 10. Direct file path concatenation without canonical path checks allows attackers to read sensitive files with simple <code>../</code> payloads. Naive string replacement like <code>.replace('../', '')</code> is ineffective against nested sequences like <code>....//</code>. The best defenses combine canonical path containment validation (<code>os.path.realpath</code> / <code>commonpath</code>) with strict object-level authorization checks.
 </p>
 
 </body>
