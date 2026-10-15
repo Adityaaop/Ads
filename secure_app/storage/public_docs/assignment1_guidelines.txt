@@ -1,0 +1,8 @@
+Assignment-1: Threat and Exploit Demonstration using OWASP & CWE Mapping
+Submission Deadline: 28-09-2026
+Evaluation Criteria:
+1. Selection of OWASP Top 10 category and mapping of corresponding CWEs.
+2. Functional dummy application illustrating the vulnerability.
+3. Proof-of-concept exploit demonstration.
+4. Comprehensive STRIDE threat model & DREAD risk assessment matrix.
+5. Robust mitigation implementation and defense-in-depth analysis.

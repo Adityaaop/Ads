@@ -1,0 +1,11 @@
+Course: Application and Data Security (ADS)
+Course Code: CS4021
+Instructor: Dr. Ajay Prasad
+Student Name: Aditya Ranjan Kumar
+Roll No: CS-2341901
+Section: 4CSE9
+
+Unit 1: Fundamentals of Application Security & OWASP Top 10
+Unit 2: Threat Modeling (STRIDE, DREAD, Attack Trees)
+Unit 3: Secure Coding & Vulnerability Remediation (CWE, SANS Top 25)
+Unit 4: Database & Cloud Data Security
